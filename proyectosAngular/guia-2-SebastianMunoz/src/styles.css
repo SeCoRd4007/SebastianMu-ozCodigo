@@ -1,1 +1,259 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    /* Colores */
+    --color-encabezado: #000000;
+    --color-texto-encabezado: #ffffff;
+    --color-fila1-3-bg: #bec1c3;
+    --color-fila1-3-text: #000000;
+    --color-fila2-bg: #045795;
+    --color-fila2-text: #ffffff;
+    --color-titulo: #ff4900;
+    --color-parafo1: #0093FF;
+    --color-parafo2: #c500ff;
+    --color-link: #001bff;
+    --color-link-visitado: #4CAF50;
+    --color-link-hover: #ff6600;
+    --color-header-bg: #cccccc;
+    --color-logo-bg: #ffcc00;
+    --color-search-bg: #ffffff;
+    --color-container-bg: #00cc00;
+    --color-container-border: #008a00;
+    --color-sidebar-bg: #999999;
+    --color-footer-bg: #ffcc00;
+    --color-footer-box-bg: #cccccc;
+    --color-logo-text:#ffffff;
+    --color-main-bg: #25a9c0;
+    --color-main-border:#1e8496;
+    --color-borde-side: #808080;
+    --color-border-logo:#cfa601;
+
+    /* Tamaños de fuente */
+    --tamaño-encabezado: 1.5rem;
+    --tamaño-titulo: 2rem;
+    --tamaño-parrafo1: 1rem;
+    --tamaño-parrafo2: 12px;
+
+    /* Fuente */
+    --arial: Arial, sans-serif;
+    --neko: 'Nerko One', cursive;
+
+    /* Bordes */
+    --borde-tabla: 1px solid black;
+
+    /* Padding */
+    --separacion: 8px;
+
+    /*centrado de texto*/
+    --centrar: center;
+
+    
+    /* Bordes */
+    --border-container: 20px solid #50a6f7;
+    
+    /* Tamaños */
+    --height-header: 120px;
+    --height-logo: 70px;
+    --height-footer: 150px;
+    --width-sidebar: 200px;
+    --height-search: 40px;
+    --width-search: 250px;
+
+    
+}
+
+/* Aplicando las variables a los estilos */
+
+/* Estilo para el título <h2> */
+h2 {
+    color: var(--color-titulo);
+    font-size: var(--tamaño-titulo);
+}
+
+/* Estilo para el primer párrafo */
+p.primero {
+    font-size: var(--tamaño-parrafo1);
+    color: var(--color-parafo1);
+    font-family: var(--arial);
+}
+
+/* Estilo para el segundo párrafo */
+p.segundo {
+    font-size: var(--tamaño-parrafo2);
+    color: var(--color-parafo2);
+    font-family: var(--neko);
+}
+
+/* Estilo para los enlaces en la lista desordenada */
+ul li a {
+    color: var(--color-link);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--color-link-visitado);
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+/* Estilo para la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: var(--borde-tabla);
+}
+
+th, td {
+    border: var(--borde-tabla);
+    text-align: left;
+    padding: var(--separacion);
+}
+
+/* Encabezado de la tabla */
+th {
+    background-color: var(--color-encabezado);
+    color: var(--color-texto-encabezado);
+    font-size: var(--tamaño-encabezado);
+    text-align: var(--centrar);
+}
+.primera{
+    background-color: var(--color-fila1-3-bg);
+    color: var(--color-fila1-3-text);
+    font-size: var(--tamaño-encabezado);
+}
+.tercera{
+    background-color: var(--color-fila1-3-bg);
+    color: var(--color-fila1-3-text);
+    font-size: var(--tamaño-encabezado);
+}
+
+.segunda {
+    background-color: var(--color-fila2-bg);
+    color: var(--color-fila2-text);
+    font-size: var(--tamaño-encabezado);
+}
+
+body {
+    margin: 0;
+}
+
+/* Contenedor general */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--color-main-bg);
+    border: 3px solid var(--color-main-border);
+}
+
+/* Header (Logo + Header + Buscador) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-header-bg);
+    height: var(--height-header);
+    color: #ffffff;
+    border: 3px solid var(--color-borde-side);
+}
+
+.logo {
+    background-color: var(--color-logo-bg);
+    height: var(--height-logo);
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    color: var(--color-logo-text);
+    border: 3px solid var(--color-border-logo);
+}
+
+.buscador {
+    background-color: var(--color-search-bg);
+    width: var(--width-search);
+    height: var(--height-search);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor principal (Sidebar + Content) */
+.main {
+    display: flex;
+    height: 800px;
+    background-color: var(--color-main-bg);
+    
+}
+
+.sidebar {
+    display: flex;
+    background-color: var(--color-sidebar-bg);
+    width: var(--width-sidebar);
+    border: 3px solid var(--color-borde-side);
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.content {
+    display: flex;
+    background-color: var(--color-container-bg);
+    border: 3px solid var(--color-container-border);
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    background-color: var(--color-footer-bg);
+    height: var(--height-footer);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 3px solid var(--color-border-logo);
+    padding-right: 10%;
+    color: #ffffff;
+}
+.div-texto{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.footer-box {
+    background-color: var(--color-footer-box-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--color-borde-side);
+    padding-left: 8%;
+    padding-right: 8%;
+    
+}
+.sub-footer{
+    display: flex;
+    background-color: var(--color-footer-bg);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content:space-between;
+}
+.contenedor-text{
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+}
