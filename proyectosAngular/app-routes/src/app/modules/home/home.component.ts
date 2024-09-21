@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { AuthComponent } from "../auth/auth.component";
 import { SidebarComponent } from "../sidebar/sidebar.component";
 import { SidetopPageComponent } from "../sidetop/views/sidetop-page/sidetop-page.component";
+import { PrimePageComponent } from "../UI/views/prime-page/prime-page.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AuthComponent, SidebarComponent, SidetopPageComponent],
+  imports: [AuthComponent, SidebarComponent, SidetopPageComponent, PrimePageComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
