@@ -1,0 +1,4 @@
+<form [formGroup]="userForm">
+    <app-personal-form></app-personal-form>
+    <button pButton type="submit" label="Enviar" [disabled]="userForm.invalid"></button>
+</form>

@@ -1,0 +1,35 @@
+<div>
+    <h2 >Formulario de Solicitud de Vacaciones</h2>
+    <div>
+      <label for="name" class="block font-semibold">Nombre</label>
+      <div class="p-field">
+            <i class="pi p"></i>
+          <input pInputText id="name" class="w-full p-inputtext-sm" formControlName="name"/>
+      </div>
+      <div>
+        <div *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched" class="error">
+            El nombre es requerido
+        </div>
+      </div>
+        <div>
+            <label for="email">Correo electrónico</label>
+            <div class="p-field">
+                <i class="pi pi-envelope"></i>
+                <input id="email" type="email" pInputText formControlName="email" />
+                <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="error">
+                    Correo no válido
+                </div>
+            </div>
+        </div>
+        <div>
+            <label for="phone">Teléfono</label>
+            <div class="p-field">
+                <i class="pi pi-phone"></i>
+                <input id="phone" type="phone" pInputText formControlName="phone" />
+                <div *ngIf="userForm.controls['phone'].invalid && userForm.controls['phone'].touched" class="error">
+                    el teléfono es requerido
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
