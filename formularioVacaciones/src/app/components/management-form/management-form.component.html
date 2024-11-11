@@ -1,35 +1,28 @@
-<div>
-    <label for="primerNombre" class="block font-semibold">Nombre</label>
-    <div class="p-field">
-        <input pInputText id="name" placeholder="Primer nombre" class="w-full p-inputtext-sm" formControlName="name"/>
-        <input pInputText id="apellido" placeholder="Apellido" class="w-full p-inputtext-sm" formConrolName="lastName" />
+<form [formGroup]="userForm">
+    <div class="formgrid grid">
+        <div class="field col-12">
+            el nombre del gerente
+        </div>
+        <div class="field col-12">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi">T</i>
+                </span>
+                <input pInputText id="managementname" formControlName="managementname" class="w-full"/>
+            </div>
+            <p-message *ngIf="userForm.controls['managementname'].invalid && userForm.controls['managementname'].touched" severity="error" text="El Nombre  del gerente es requerido"></p-message>
+        </div>
+        <div class="field col-12">
+            correo electrónico del gerente
+        </div>
+        <div class="field col-12">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-envelope"></i>
+                </span>
+                <input pInputText id="managementemail" formControlName="managementemail" class="w-full">
+            </div>
+            <p-message *ngIf="userForm.controls['managementemail'].invalid && userForm.controls['managementemail'].touched" severity="error" text="correo de gerente no valido"></p-message>
+        </div>
     </div>
-    <div>
-      <div *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched" class="error">
-          El nombre es requerido
-      </div>
-      <div *ngIf="userForm.controls['lastName'].invalid && userForm.controls['lastName'].touched" class="error">
-          El apellido es requerido
-      </div>
-    </div>
-      <div>
-          <label for="email">Correo electrónico</label>
-          <div class="p-field">
-              <i class="pi pi-envelope"></i>
-              <input id="email" type="email" pInputText formControlName="email" />
-              <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="error">
-                  Correo no válido
-              </div>
-          </div>
-      </div>
-      <div>
-          <label for="phone">Teléfono</label>
-          <div class="p-field">
-              <i class="pi pi-phone"></i>
-              <input id="phone" type="phone" pInputText formControlName="phone" />
-              <div *ngIf="userForm.controls['phone'].invalid && userForm.controls['phone'].touched" class="error">
-                  el teléfono es requerido
-              </div>
-          </div>
-      </div>
-  </div>
+</form>

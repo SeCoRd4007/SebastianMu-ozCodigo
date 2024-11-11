@@ -1,35 +1,38 @@
-<div>
-    <h2 >Formulario de Solicitud de Vacaciones</h2>
-    <div>
-      <label for="name" class="block font-semibold">Nombre</label>
-      <div class="p-field">
-            <i class="pi p"></i>
-          <input pInputText id="name" class="w-full p-inputtext-sm" formControlName="name"/>
-      </div>
-      <div>
-        <div *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched" class="error">
-            El nombre es requerido
+<form [formGroup]="userForm">
+    <div class="flex justify-content-center">
+        <h2>Formulario de Solicitud de Vacaciones</h2>
+    </div>
+    <div class="my-2">
+        <label for="name">Nombre</label>
+    </div>
+    <div class="formgrid grid">
+        <div class="field col-12 md:col-6">
+            <input pInputText id="name" formControlName="name" placeholder="Primer Nombre" class="w-full"/>
+            <p-message *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched" severity="error" text="El Nombre es requerido"></p-message>
         </div>
-      </div>
-        <div>
+        <div class="field col-12 md:col-6">
+            <input pInputText id="lastName" formControlName="lastName" placeholder="Apellido" class="w-full"/>
+            <p-message *ngIf="userForm.controls['lastName'].invalid && userForm.controls['lastName'].touched" severity="error" text="El Apellido es requerido"></p-message>
+        </div>
+        <div class="field col-12">
             <label for="email">Correo electrónico</label>
-            <div class="p-field">
-                <i class="pi pi-envelope"></i>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-envelope"></i>
+                </span>
                 <input id="email" type="email" pInputText formControlName="email" />
-                <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="error">
-                    Correo no válido
-                </div>
             </div>
+            <p-message *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" severity="error" text="correo no valido"></p-message>
         </div>
-        <div>
+        <div class="field col-12">
             <label for="phone">Teléfono</label>
-            <div class="p-field">
-                <i class="pi pi-phone"></i>
-                <input id="phone" type="phone" pInputText formControlName="phone" />
-                <div *ngIf="userForm.controls['phone'].invalid && userForm.controls['phone'].touched" class="error">
-                    el teléfono es requerido
-                </div>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-phone"></i>
+                </span>
+                <input id="phone" type="number" pInputText formControlName="phone" class="w-full"/>
             </div>
+            <p-message *ngIf="userForm.controls['phone'].invalid && userForm.controls['phone'].touched" severity="error" text="Telefono requerido"></p-message>
         </div>
     </div>
-</div>
+</form>
