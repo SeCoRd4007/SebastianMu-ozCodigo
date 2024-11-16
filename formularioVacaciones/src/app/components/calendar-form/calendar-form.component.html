@@ -1,0 +1,35 @@
+<form [formGroup]="userForm">
+    <h4>Detalles de la licencia</h4>
+    <div class="formgrid grid">
+        <div class="field p-fluid col-12 w-full">
+            <label for="calendarini">Fecha de Inicio</label>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-calendar"></i>
+                </span>
+                <p-calendar formControlName="datestrt" placeholder="DD/MM/YYYY" dateFormat="dd/mm/yy" [showTime]="false"></p-calendar>
+            </div>
+            <p-message *ngIf="userForm.controls['datestrt'].invalid && userForm.controls['datestrt'].touched" severity="error" text="la fecha de inicio es requerida"></p-message>
+        </div>
+        <div class="field p-fluid w-full col-12">
+            <label for="calendarend">Fecha de Finalización</label>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-calendar"></i>
+                </span>
+                <p-calendar formControlName="dateend" placeholder="DD/MM/YYYY" dateFormat="dd/mm/yy" [showTime]="false"></p-calendar>
+            </div>
+            <p-message *ngIf="userForm.controls['dateend'].invalid && userForm.controls['dateend'].touched" severity="error" text="la fecha de finalización es requerida"></p-message>
+        </div>
+        <div class="field col-12">
+            <label for="txtArea">Notas</label>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-align-left"></i>
+                </span>
+                <textarea pInputTextarea formControlName="txtArea" rows="8"></textarea>
+            </div>
+            <p-message *ngIf="userForm.controls['txtArea'].invalid && userForm.controls['txtArea'].touched" severity="error" text="Nota requerida"></p-message>
+        </div>
+    </div>
+</form>

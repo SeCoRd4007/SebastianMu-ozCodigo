@@ -1,0 +1,28 @@
+<form [formGroup]="userForm">
+    <div class="formgrid grid">
+        <div class="field col-12">
+            el nombre del gerente
+        </div>
+        <div class="field col-12">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi">T</i>
+                </span>
+                <input pInputText id="managementname" formControlName="managementname" class="w-full"/>
+            </div>
+            <p-message *ngIf="userForm.controls['managementname'].invalid && userForm.controls['managementname'].touched" severity="error" text="El Nombre  del gerente es requerido"></p-message>
+        </div>
+        <div class="field col-12">
+            correo electrónico del gerente
+        </div>
+        <div class="field col-12">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-envelope"></i>
+                </span>
+                <input pInputText id="managementemail" formControlName="managementemail" class="w-full">
+            </div>
+            <p-message *ngIf="userForm.controls['managementemail'].invalid && userForm.controls['managementemail'].touched" severity="error" text="correo de gerente no valido"></p-message>
+        </div>
+    </div>
+</form>
