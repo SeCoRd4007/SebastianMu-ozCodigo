@@ -1,0 +1,8 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <app-personal-form [userForm]="userForm"/>
+    <app-management-form [userForm]="userForm"/>
+    <app-calendar-form [userForm]="userForm"/>
+    <div class="flex justify-content-center align-items-center h-full">
+        <button pButton type="submit" label="Enviar" [disabled]="userForm.invalid" class=></button>
+    </div>
+</form>
