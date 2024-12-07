@@ -1,0 +1,22 @@
+<div class="flex justify-content-center align-items-center h-full flex-column">
+    <p-card header="Editar Producto" >
+            <form [formGroup]="form" (ngSubmit)="onUpdate()">
+                <div class="flex flex-column" [style]="{ width: '25rem' }">
+                    <input pInputText formControlName="name" type="text" class="form-control" placeholder="Nombre"/>
+                    <p-message *ngIf="form.controls['name'].invalid && form.controls['name'].touched" severity="error" text="El Nombre es requerido"></p-message>
+                    <input pInputText formControlName="description" type="text" class="form-control mt-2" placeholder="descripcion"/>
+                    <p-message *ngIf="form.controls['description'].invalid && form.controls['description'].touched" severity="error" text="la Descripcion es requerida"></p-message>
+                    <input pInputText formControlName="price" type="number" class="form-control mt-2" placeholder="precio"/>
+                    <p-message *ngIf="form.controls['price'].invalid && form.controls['price'].touched" severity="error" text="El Precio es requerido"></p-message>
+                    <input pInputText formControlName="stock" type="number" class="form-control mt-2" placeholder="stock"/>
+                    <p-message *ngIf="form.controls['stock'].invalid && form.controls['stock'].touched" severity="error" text="Ingrese minimo 1 producto"></p-message>
+                    <div class="row mt-2 text-center">
+                        <div class="flex flex-row flex-wrap justify-content-between">
+                            <button pButton type="submit" [disabled]="form.invalid">Editar</button>
+                            <button pButton  type="button" (click)="closeDialog()" class="btn btn-secondary">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+    </p-card>
+</div>

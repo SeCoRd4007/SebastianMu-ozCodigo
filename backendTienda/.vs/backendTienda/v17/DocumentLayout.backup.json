@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nari\u00F1o\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CFFD1088-43B7-4D7B-8926-66AA95AC1A00}|backendTienda.csproj|c:\\users\\secord\\onedrive - universidad de nari\u00F1o\\documentos universidad\\computacion grafica\\sebastianmu-ozcodigo\\backendtienda\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFFD1088-43B7-4D7B-8926-66AA95AC1A00}|backendTienda.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFFD1088-43B7-4D7B-8926-66AA95AC1A00}|backendTienda.csproj|c:\\users\\secord\\onedrive - universidad de nari\u00F1o\\documentos universidad\\computacion grafica\\sebastianmu-ozcodigo\\backendtienda\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFFD1088-43B7-4D7B-8926-66AA95AC1A00}|backendTienda.csproj|solutionrelative:product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "product.cs",
+              "DocumentMoniker": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nari\u00F1o\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\product.cs",
+              "RelativeDocumentMoniker": "product.cs",
+              "ToolTip": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nari\u00F1o\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\product.cs",
+              "RelativeToolTip": "product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:41:31.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "productController.cs",
+              "DocumentMoniker": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nari\u00F1o\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\Controllers\\productController.cs",
+              "RelativeDocumentMoniker": "Controllers\\productController.cs",
+              "ToolTip": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nari\u00F1o\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\Controllers\\productController.cs",
+              "RelativeToolTip": "Controllers\\productController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAkwHQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T13:30:14.684Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
