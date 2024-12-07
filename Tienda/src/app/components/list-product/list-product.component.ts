@@ -23,9 +23,11 @@ import { ToastMessageService } from '../../services/toast-message.service';
 export class ListProductComponent {
   displayAddDialog = false; // Diálogo para agregar
   displayEditDialog = false; // Diálogo para editar
+
   // Datos del producto a editar
   selectedProduct: any;
 
+  // Método para abrir el diálogo de agregar
   openAddDialog() {
     this.selectedProduct = null; // No se pasa ningún producto para agregar
     this.displayAddDialog = true;
@@ -33,7 +35,7 @@ export class ListProductComponent {
 
   // Método para abrir el diálogo de editar
   openEditDialog(product: any) {
-    this.selectedProduct = product; 
+    this.selectedProduct = product; // Se pasa el producto a editar
     this.displayEditDialog = true;
   }
 

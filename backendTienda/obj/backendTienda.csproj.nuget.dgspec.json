@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nariño\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\backendTienda.csproj": {}
+    "C:\\Users\\SeCoRd\\Documents\\con esta me graduo\\SebastianMu-ozCodigo\\backendTienda\\backendTienda.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nariño\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\backendTienda.csproj": {
+    "C:\\Users\\SeCoRd\\Documents\\con esta me graduo\\SebastianMu-ozCodigo\\backendTienda\\backendTienda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nariño\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\backendTienda.csproj",
+        "projectUniqueName": "C:\\Users\\SeCoRd\\Documents\\con esta me graduo\\SebastianMu-ozCodigo\\backendTienda\\backendTienda.csproj",
         "projectName": "backendTienda",
-        "projectPath": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nariño\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\backendTienda.csproj",
+        "projectPath": "C:\\Users\\SeCoRd\\Documents\\con esta me graduo\\SebastianMu-ozCodigo\\backendTienda\\backendTienda.csproj",
         "packagesPath": "C:\\Users\\SeCoRd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nariño\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\obj\\",
+        "outputPath": "C:\\Users\\SeCoRd\\Documents\\con esta me graduo\\SebastianMu-ozCodigo\\backendTienda\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
