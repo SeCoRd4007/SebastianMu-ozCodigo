@@ -21,33 +21,27 @@ import { ToastMessageService } from '../../services/toast-message.service';
   styleUrl: './list-product.component.css'
 })
 export class ListProductComponent {
-  displayAddDialog = false; // Diálogo para agregar
-  displayEditDialog = false; // Diálogo para editar
-
-  // Datos del producto a editar
+  displayAddDialog = false; 
+  displayEditDialog = false;
   selectedProduct: any;
 
-  // Método para abrir el diálogo de agregar
   openAddDialog() {
-    this.selectedProduct = null; // No se pasa ningún producto para agregar
+    this.selectedProduct = null; 
     this.displayAddDialog = true;
   }
 
-  // Método para abrir el diálogo de editar
   openEditDialog(product: any) {
-    this.selectedProduct = product; // Se pasa el producto a editar
+    this.selectedProduct = product; 
     this.displayEditDialog = true;
   }
-
-  // Métodos para cerrar los diálogos
   closeAddDialog() {
-    this.getListProduct();
     this.displayAddDialog = false;
+    this.getListProduct();
   }
 
   closeEditDialog() {
-    this.getListProduct();
     this.displayEditDialog = false;
+    this.getListProduct()
   }
 
   listProducts: Product[] = []
@@ -55,16 +49,11 @@ export class ListProductComponent {
     constructor( private productservice:TiendaServiceService,private toastService: ToastMessageService) {
       this.getListProduct();
     }
-
-  
-    
     getListProduct(){
       this.productservice.getProducts().subscribe((data) =>{
         this.listProducts = data;
       })
     }
-    
-
     deleteProduct(id: number, name:string) {
       this.productservice.deleteProduct(id).subscribe({ 
         error: response => {

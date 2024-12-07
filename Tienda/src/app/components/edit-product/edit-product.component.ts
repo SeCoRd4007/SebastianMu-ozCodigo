@@ -8,6 +8,7 @@ import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { ToastMessageService } from '../../services/toast-message.service';
+
 @Component({
   selector: 'app-edit-product',
   standalone: true,
@@ -67,6 +68,7 @@ export class EditProductComponent {
           this.toastService.showSuccess('¡Producto Editado!', 'El producto se editó correctamente');
           this.dialogVisible = false; // Cerrar el diálogo después de la actualización
           this.dialogVisibleChange.emit(this.dialogVisible);
+          window.location.reload();
         },
         next: () => {
           this.toastService.showWarn('¡Advertencia!', 'El producto no ha sido editado');
@@ -81,7 +83,8 @@ export class EditProductComponent {
   // Método para cerrar el diálogo y emitir el cambio
   closeDialog(): void {
     this.dialogVisible = false;
-    this.dialogVisibleChange.emit(this.dialogVisible);  // Emite el nuevo valor al componente padre
+    this.dialogVisibleChange.emit(this.dialogVisible);
+    
   }
 
   // Método para abrir el diálogo

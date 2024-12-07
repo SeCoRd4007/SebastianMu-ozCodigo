@@ -37,6 +37,7 @@ export class AddProductComponent {
       this.prudctservice.registro(name, description, price, stock).subscribe({ 
           error: response => {
             this.toastService.showSuccess('¡Producto Agregado!', 'El producto se agrego correctamente');
+            window.location.reload();
           },
           next: error => {
             this.toastService.showWarn('¡Advertencia!', 'El producto no se agrego');
