@@ -23,6 +23,7 @@ export class EditProductComponent {
     private prudctservice: TiendaServiceService, private toastService: ToastMessageService
   ){
     this.form = this.fb.group({
+      id: ['', Validators.required],
       name: ['', Validators.required],
       description: ['', Validators.required],
       price: ['', Validators.required],
