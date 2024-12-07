@@ -41,10 +41,12 @@ export class ListProductComponent {
 
   // Métodos para cerrar los diálogos
   closeAddDialog() {
+    this.getListProduct();
     this.displayAddDialog = false;
   }
 
   closeEditDialog() {
+    this.getListProduct();
     this.displayEditDialog = false;
   }
 

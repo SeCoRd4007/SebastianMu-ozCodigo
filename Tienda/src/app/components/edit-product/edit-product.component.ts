@@ -57,21 +57,18 @@ export class EditProductComponent {
     }
   }
   
-  // En el componente hijo, escuchar el cambio de selectedProduct y actualizar el formulario
+  
 
   onUpdate(): void {
-    console.log(this.form);
     if (this.form.valid) {
       const { id, name, description, price, stock } = this.form.value;
-
-      // Llamar al servicio para editar el producto
       this.prudctservice.editProduct(id, name, description, price, stock).subscribe({
-        next: () => {
+        error: () => {
           this.toastService.showSuccess('¡Producto Editado!', 'El producto se editó correctamente');
           this.dialogVisible = false; // Cerrar el diálogo después de la actualización
           this.dialogVisibleChange.emit(this.dialogVisible);
         },
-        error: () => {
+        next: () => {
           this.toastService.showWarn('¡Advertencia!', 'El producto no ha sido editado');
         }
       });

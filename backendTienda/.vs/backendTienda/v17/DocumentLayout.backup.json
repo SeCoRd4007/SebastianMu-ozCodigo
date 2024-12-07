@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nari\u00F1o\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\",
+  "WorkspaceRootPath": "C:\\Users\\SeCoRd\\Documents\\con esta me graduo\\SebastianMu-ozCodigo\\backendTienda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFFD1088-43B7-4D7B-8926-66AA95AC1A00}|backendTienda.csproj|c:\\users\\secord\\onedrive - universidad de nari\u00F1o\\documentos universidad\\computacion grafica\\sebastianmu-ozcodigo\\backendtienda\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFFD1088-43B7-4D7B-8926-66AA95AC1A00}|backendTienda.csproj|c:\\users\\secord\\documents\\con esta me graduo\\sebastianmu-ozcodigo\\backendtienda\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFFD1088-43B7-4D7B-8926-66AA95AC1A00}|backendTienda.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFFD1088-43B7-4D7B-8926-66AA95AC1A00}|backendTienda.csproj|c:\\users\\secord\\onedrive - universidad de nari\u00F1o\\documentos universidad\\computacion grafica\\sebastianmu-ozcodigo\\backendtienda\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFFD1088-43B7-4D7B-8926-66AA95AC1A00}|backendTienda.csproj|c:\\users\\secord\\documents\\con esta me graduo\\sebastianmu-ozcodigo\\backendtienda\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFFD1088-43B7-4D7B-8926-66AA95AC1A00}|backendTienda.csproj|solutionrelative:product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,9 +28,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "product.cs",
-              "DocumentMoniker": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nari\u00F1o\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\product.cs",
+              "DocumentMoniker": "C:\\Users\\SeCoRd\\Documents\\con esta me graduo\\SebastianMu-ozCodigo\\backendTienda\\product.cs",
               "RelativeDocumentMoniker": "product.cs",
-              "ToolTip": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nari\u00F1o\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\product.cs",
+              "ToolTip": "C:\\Users\\SeCoRd\\Documents\\con esta me graduo\\SebastianMu-ozCodigo\\backendTienda\\product.cs",
               "RelativeToolTip": "product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -40,9 +40,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "productController.cs",
-              "DocumentMoniker": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nari\u00F1o\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\Controllers\\productController.cs",
+              "DocumentMoniker": "C:\\Users\\SeCoRd\\Documents\\con esta me graduo\\SebastianMu-ozCodigo\\backendTienda\\Controllers\\productController.cs",
               "RelativeDocumentMoniker": "Controllers\\productController.cs",
-              "ToolTip": "C:\\Users\\SeCoRd\\OneDrive - Universidad de Nari\u00F1o\\documentos Universidad\\computacion grafica\\SebastianMu-ozCodigo\\backendTienda\\Controllers\\productController.cs",
+              "ToolTip": "C:\\Users\\SeCoRd\\Documents\\con esta me graduo\\SebastianMu-ozCodigo\\backendTienda\\Controllers\\productController.cs",
               "RelativeToolTip": "Controllers\\productController.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAQwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

@@ -20,7 +20,6 @@ export class TiendaServiceService {
   editProduct(id: number, name: string,description: string, price: number, stock: number): Observable<any>{
     
     const body = {name,description,price,stock};
-    console.log("Editando producto con id:", id);
     return this.http.put(`${this.apiUrl}/update/${id}`, body);
   }
 

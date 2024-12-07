@@ -103,7 +103,8 @@ namespace backendTienda.Controllers
 
             using (var connection = new SqlConnection(_connectionstring))
             {
-                var sql = "UPDATE products set prname = @name, prdescription = @description, prprice = @price, prstock = @stock WHERE Id = @Id";
+                var sql = "" +
+                    "UPDATE products SET prname = @name, prdescription = @description,prprice = @price,   prstock = @stock WHERE Id = @id";
                 var rowsAffected = connection.Execute(sql, new { Id = id, products.name, products.description, products.price, products.stock });
 
                 if (rowsAffected > 0)
