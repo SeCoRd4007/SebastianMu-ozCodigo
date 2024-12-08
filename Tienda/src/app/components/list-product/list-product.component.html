@@ -1,5 +1,9 @@
 <app-toolbar></app-toolbar>
-
+<app-search-products 
+  [displayDialog]="displaySearchDialog"
+  [listProducts]="listProducts"
+  (close)="closeSearchDialog()">
+</app-search-products>
 <div class="p-fluid">
     <p-table [value]="listProducts" *ngIf="listProducts.length > 0" class="p-mt-4"  [paginator]="true" 
         [rows]="5"
@@ -30,8 +34,8 @@
   
     <h5 *ngIf="listProducts.length === 0" class="p-text-center">No hay productos en el inventario</h5>
   </div>
-  
   <button pButton class="mt-5 ml-5" icon="pi pi-plus-circle" type="button" (click)="openAddDialog()" ></button>
+  <button pButton class="mt-5 ml-5" icon="pi pi-search" type="button" (click)="openSearchDialog()" ></button>
 <p-dialog [modal]="true" [(visible)]="displayAddDialog" [style]="{ width: '35rem' }">
     <app-add-product [(dialogVisible)]="displayAddDialog"></app-add-product>
 </p-dialog>

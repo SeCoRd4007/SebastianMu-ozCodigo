@@ -27,6 +27,22 @@
   },
   {
     "ContainingType": "backendTienda.Controllers.productController",
+    "Method": "GetProducts",
+    "RelativePath": "api/product/getProductsname",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendTienda.Controllers.productController",
     "Method": "Registro",
     "RelativePath": "api/product/registro",
     "HttpMethod": "POST",

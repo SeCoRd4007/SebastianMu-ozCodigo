@@ -113,6 +113,27 @@
         }
       }
     },
+    "/api/product/getProductsname": {
+      "get": {
+        "tags": [
+          "product"
+        ],
+        "parameters": [
+          {
+            "name": "search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [

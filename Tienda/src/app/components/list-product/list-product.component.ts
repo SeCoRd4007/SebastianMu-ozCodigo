@@ -11,20 +11,44 @@ import { TableModule } from 'primeng/table';
 import { EditProductComponent } from "../edit-product/edit-product.component";
 import { Product } from '../Interfaces/products';
 import { ToastMessageService } from '../../services/toast-message.service';
+import { SearchProductsComponent } from "../search-products/search-products.component";
 @Component({
   selector: 'app-list-product',
   standalone: true,
   imports: [ButtonModule, DialogModule, ToastModule, AddProductComponent, ToolbarComponent, CommonModule,
-    TableModule, EditProductComponent],
+    TableModule, EditProductComponent, SearchProductsComponent],
   providers: [MessageService],
   templateUrl: './list-product.component.html',
   styleUrl: './list-product.component.css'
 })
 export class ListProductComponent {
-  displayAddDialog = false; 
-  displayEditDialog = false;
-  selectedProduct: any;
+  constructor( private productservice:TiendaServiceService,private toastService: ToastMessageService) {
+    this.getListProduct();
+  }
+  listProducts: Product[] = [];
+  filteredProducts: Product[] = []; 
+  displaySearchDialog: boolean = false;
+  displayAddDialog: boolean = false;
+  displayEditDialog: boolean = false;
+  selectedProduct: Product | null = null;
 
+  getListProduct() {
+    this.productservice.getProducts().subscribe((data: Product[]) => {
+      this.listProducts = data;
+    });
+  }
+
+  // Abrir el diálogo de búsqueda
+  openSearchDialog() {
+    this.displaySearchDialog = true;
+  }
+
+
+
+
+  closeSearchDialog() {
+    this.displaySearchDialog = false;
+  }
   openAddDialog() {
     this.selectedProduct = null; 
     this.displayAddDialog = true;
@@ -38,34 +62,29 @@ export class ListProductComponent {
     this.displayAddDialog = false;
     this.getListProduct();
   }
-
   closeEditDialog() {
     this.displayEditDialog = false;
     this.getListProduct()
   }
-
-  listProducts: Product[] = []
-
-    constructor( private productservice:TiendaServiceService,private toastService: ToastMessageService) {
-      this.getListProduct();
-    }
-    getListProduct(){
-      this.productservice.getProducts().subscribe((data) =>{
-        this.listProducts = data;
-      })
-    }
-    deleteProduct(id: number, name:string) {
-      this.productservice.deleteProduct(id).subscribe({ 
-        error: response => {
-          this.toastService.showWarn('¡Advertencia!', 'El producto ' + name + ' ha sido eliminado.');
-          this.getListProduct();
-        },
-        next: error => {
-          this.toastService.showError('Error!', 'accion suspendida');
-        },
-        complete: () => {
-          this.toastService.showSuccess('¡Proceso Completado!', 'El proceso se completo correctamente')
-        }
-      });
-    }
+  
+  getListProductname(searchTerm?: string) {
+    this.productservice.getProductsname(searchTerm).subscribe((data) => {
+      this.listProducts = data;
+    });
+  }
+  
+  deleteProduct(id: number, name:string) {
+    this.productservice.deleteProduct(id).subscribe({ 
+      error: response => {
+        this.toastService.showWarn('¡Advertencia!', 'El producto ' + name + ' ha sido eliminado.');
+        this.getListProduct();
+      },
+      next: error => {
+        this.toastService.showError('Error!', 'accion suspendida');
+      },
+      complete: () => {
+        this.toastService.showSuccess('¡Proceso Completado!', 'El proceso se completo correctamente')
+      }
+    });
+  }
 }

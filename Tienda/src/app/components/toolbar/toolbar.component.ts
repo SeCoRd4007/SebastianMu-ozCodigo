@@ -11,6 +11,7 @@ import { ToolbarModule } from 'primeng/toolbar';
 export class ToolbarComponent {
   @Output() open = new EventEmitter<void>();
 
+  
   openDialog() {
     this.open.emit(); // Emite el evento para abrir el diálogo en el padre
   }

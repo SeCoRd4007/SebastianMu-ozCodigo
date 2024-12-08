@@ -118,5 +118,36 @@ namespace backendTienda.Controllers
             }
         }
 
+        [HttpGet("getProductsname")]
+        public IActionResult GetProducts([FromQuery] string? search = null)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(_connectionstring))
+                {
+                    var sql = "SELECT id AS Id, prname AS name, prdescription AS description, prprice AS price, prstock AS stock FROM products";
+
+                    // Agregar cláusula WHERE si se proporciona un término de búsqueda
+                    if (!string.IsNullOrEmpty(search))
+                    {
+                        sql += " WHERE prname LIKE @Search OR prdescription LIKE @Search";
+                    }
+
+                    var products = connection.Query<product>(sql, new { Search = $"%{search}%" }).ToList();
+
+                    if (products == null || products.Count == 0)
+                    {
+                        return NotFound("No products found");
+                    }
+
+                    return Ok(products);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
     }
 }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Product } from '../components/Interfaces/products';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,15 @@ export class TiendaServiceService {
   deleteProduct(id: number): Observable<any>{
     return this.http.delete(`${this.apiUrl}/delete/${id}`);
   }
+  getProductsname(searchTerm?: string): Observable<Product[]> {
+    let url = `${this.apiUrl}/getProducts`;
 
+    // Si se pasa un término de búsqueda, lo agregamos a la URL
+    if (searchTerm) {
+      url += `?search=${encodeURIComponent(searchTerm)}`;
+    }
+
+    return this.http.get<Product[]>(url); // Regresa un Observable de Product[]
+  }
   
 }
