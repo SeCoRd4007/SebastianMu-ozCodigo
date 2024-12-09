@@ -1,0 +1,31 @@
+<div class="p-fluid flex justify-content-center align-items-center h-full mt-7">
+    <p-card header="Registro" [style]="{width:'360px'}">
+        <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+        
+            <div class="p-field">
+              <label for="nombre">Nombre completo </label>
+              <input id="nombre" type="text" pInputText formControlName="nombre" />
+              <small *ngIf="registroForm.controls['nombre'].touched && registroForm.controls['nombre'].invalid" class="p-error">El nombre es obligatorio</small>
+            </div>
+        
+            <div class="p-field">
+              <label for="email">Correo Electrónico</label>
+              <input id="email" type="email" pInputText formControlName="email" />
+              <small *ngIf="registroForm.controls['email'].touched && registroForm.controls['email'].invalid" class="p-error">Correo electrónico no válido</small>
+            </div>
+      
+            <div class="p-fluid mb-5">
+              <p>Password</p>                                  
+              <p-password type="password" formControlName="password" class="w-full" name="password" placeholder="Contraseña" />
+              <small *ngIf="registroForm.controls['password'].touched && registroForm.controls['password'].invalid" class="p-error">contraseña demasiado corta</small>
+             </div>
+      
+             <div class="p-fluid mb-5">
+              <p>Password</p>                                  
+              <p-password type="confirmpassword" formControlName="confirmpassword" class="w-full" name="confirmpassword" placeholder="confirma Contraseña" />
+              <small *ngIf="registroForm.controls['confirmpassword'].touched && registroForm.controls['confirmpassword'].invalid" class="p-error">las contraseñas deben coincidir</small>
+             </div>
+            <button pButton type="submit" label="Registrarse" [disabled]="registroForm.invalid"></button>
+          </form>
+    </p-card>
+  </div>

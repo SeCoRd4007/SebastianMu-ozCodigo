@@ -1,0 +1,20 @@
+<div class="flex justify-content-center align-items-center h-full mt-7">
+
+    <form [formGroup] = "loginForm" (ngSubmit)="onSubmit()">
+        <p-card header="Iniciar sesion" [style]="{width:'360px'}">
+            <div class="p-fluid">
+                <p>Email</p>
+                <input type="text" pInputText formControlName="email" class="w-full" name="email" placeholder="Nombre de usuario"/>
+                <small *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].invalid" class="p-error">Correo electrónico no válido</small>                       
+            </div>
+    
+            <div class="p-fluid mb-5">
+                <p>Password</p>                                  
+                <p-password type="password" formControlName="password" class="w-full" name="password" placeholder="Contraseña" />
+                <small *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].invalid" class="p-error">contraseña demasiado corta</small>
+            </div>
+            <p-button type="submit" label="Iniciar sesion" [disabled]="loginForm.invalid" styleClass="w-full"></p-button>
+            <div class="">No estas registrado? <p-button label="Registrate" [link]="true" (onClick)="irPagina()" /></div>
+    </p-card>
+    </form>
+</div>
